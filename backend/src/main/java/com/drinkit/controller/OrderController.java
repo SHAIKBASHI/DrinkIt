@@ -11,7 +11,7 @@ import com.drinkit.service.OrderService;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin(origins = "http://localhost:5173")
+
 public class OrderController {
 
     @Autowired

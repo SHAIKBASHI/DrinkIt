@@ -10,7 +10,7 @@ import com.drinkit.service.WishlistService;
 
 @RestController
 @RequestMapping("/api/wishlist")
-@CrossOrigin(origins = "http://localhost:5173")
+
 public class WishlistController {
 
     @Autowired

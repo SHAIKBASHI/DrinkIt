@@ -13,7 +13,7 @@ import com.drinkit.service.AddressService;
 
 @RestController
 @RequestMapping("/api/addresses")
-@CrossOrigin(origins = "http://localhost:5173")
+
 public class AddressController {
 
     @Autowired

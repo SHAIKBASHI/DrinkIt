@@ -9,7 +9,7 @@ import com.drinkit.service.AuthService.AuthResponse;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:5173")
+
 public class AuthController {
 
     @Autowired

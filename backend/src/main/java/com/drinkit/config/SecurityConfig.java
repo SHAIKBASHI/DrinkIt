@@ -209,8 +209,9 @@ public class SecurityConfig {
 
         configuration.setAllowedOrigins(
             List.of(
-                "http://localhost:5173"
-            )
+    "http://localhost:5173",
+    "https://drink-it-five.vercel.app"
+)
         );
 
         configuration.setAllowedMethods(
