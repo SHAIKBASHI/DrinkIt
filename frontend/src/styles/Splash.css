@@ -1,0 +1,719 @@
+/* =========================================================
+   DRINKIT PREMIUM SPLASH SCREEN
+========================================================= */
+
+.splash {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(30, 142, 62, 0.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(52, 168, 83, 0.07),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f5faf6 55%,
+            #edf7f0 100%
+        );
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.splash::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -180px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(30, 142, 62, 0.08);
+
+    box-shadow:
+
+        0 0 0 40px rgba(30, 142, 62, 0.025),
+        0 0 0 80px rgba(30, 142, 62, 0.015);
+
+    pointer-events: none;
+
+}
+
+
+.splash::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    bottom: -230px;
+    left: -170px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(30, 142, 62, 0.07);
+
+    box-shadow:
+
+        0 0 0 35px rgba(30, 142, 62, 0.025),
+        0 0 0 70px rgba(30, 142, 62, 0.015);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   DECORATIVE BOTTLE
+========================================================= */
+
+.splash-bottle {
+
+    position: absolute;
+
+    width: 115px;
+    height: 300px;
+
+    border: 2px solid rgba(30, 142, 62, 0.09);
+
+    border-radius:
+        32px
+        32px
+        24px
+        24px;
+
+    pointer-events: none;
+
+    opacity: 0.75;
+
+}
+
+
+/* LEFT BOTTLE */
+
+.splash-bottle-left {
+
+    left: 7%;
+
+    bottom: 8%;
+
+    transform: rotate(-9deg);
+
+}
+
+
+/* RIGHT BOTTLE */
+
+.splash-bottle-right {
+
+    right: 7%;
+
+    top: 10%;
+
+    transform: rotate(10deg);
+
+}
+
+
+/* =========================================================
+   BOTTLE NECK
+========================================================= */
+
+.bottle-neck {
+
+    position: absolute;
+
+    width: 45px;
+    height: 75px;
+
+    left: 33px;
+    top: -73px;
+
+    border:
+        2px solid rgba(30, 142, 62, 0.09);
+
+    border-bottom: none;
+
+    border-radius:
+        12px
+        12px
+        0
+        0;
+
+}
+
+
+/* =========================================================
+   BOTTLE LABEL
+========================================================= */
+
+.bottle-label {
+
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+
+    top: 105px;
+
+    padding: 12px 5px;
+
+    border-top:
+        1px solid rgba(30, 142, 62, 0.08);
+
+    border-bottom:
+        1px solid rgba(30, 142, 62, 0.08);
+
+    color:
+        rgba(30, 142, 62, 0.18);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   DECORATIVE GLASS
+========================================================= */
+
+.splash-glass {
+
+    position: absolute;
+
+    right: 17%;
+    bottom: 14%;
+
+    width: 100px;
+    height: 125px;
+
+    border:
+        2px solid rgba(30, 142, 62, 0.08);
+
+    border-top: none;
+
+    border-radius:
+        5px
+        5px
+        30px
+        30px;
+
+    transform: rotate(7deg);
+
+    pointer-events: none;
+
+}
+
+
+/* GLASS RIM */
+
+.splash-glass::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 18px;
+
+    left: -2px;
+    top: -8px;
+
+    border:
+        2px solid rgba(30, 142, 62, 0.08);
+
+    border-radius: 50%;
+
+}
+
+
+/* GLASS STEM */
+
+.splash-glass::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 65px;
+
+    left: 49px;
+    top: 122px;
+
+    background:
+        rgba(30, 142, 62, 0.08);
+
+}
+
+
+/* LIQUID */
+
+.glass-liquid {
+
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+
+    bottom: 18px;
+
+    height: 35px;
+
+    border-top:
+        2px solid rgba(30, 142, 62, 0.08);
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logoCircle {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #1E8E3E,
+            #34A853
+        );
+
+    color: white;
+
+    font-size: 64px;
+
+    box-shadow:
+
+        0 18px 40px rgba(30, 142, 62, 0.25),
+
+        0 0 0 10px rgba(30, 142, 62, 0.04);
+
+    animation:
+
+        splashLogo
+        1s
+        ease-out;
+
+}
+
+
+/* LOGO RING */
+
+.logoCircle::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -9px;
+
+    border:
+
+        1px solid
+        rgba(30, 142, 62, 0.20);
+
+    border-radius: 50%;
+
+    animation:
+
+        splashRing
+        2.2s
+        ease-out
+        infinite;
+
+}
+
+
+@keyframes splashLogo {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.75)
+            translateY(15px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes splashRing {
+
+    0% {
+
+        opacity: 0.7;
+
+        transform: scale(1);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform: scale(1.3);
+
+    }
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.splash h1 {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin: 28px 0 0;
+
+    color: #17231B;
+
+    font-size: 54px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.8px;
+
+    animation:
+
+        splashText
+        0.8s
+        ease-out
+        0.15s
+        both;
+
+}
+
+
+.splash h1 span {
+
+    color: #1E8E3E;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.splash p {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin: 12px 0 0;
+
+    max-width: 450px;
+
+    color: #68756D;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    animation:
+
+        splashText
+        0.8s
+        ease-out
+        0.3s
+        both;
+
+}
+
+
+@keyframes splashText {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   LOADING DOTS
+========================================================= */
+
+.splash-loading {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    gap: 6px;
+
+    margin-top: 24px;
+
+}
+
+
+.splash-loading span {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #1E8E3E;
+
+    animation:
+        splashDots
+        1.2s
+        infinite
+        ease-in-out;
+
+}
+
+
+.splash-loading span:nth-child(2) {
+
+    animation-delay: 0.15s;
+
+}
+
+
+.splash-loading span:nth-child(3) {
+
+    animation-delay: 0.3s;
+
+}
+
+
+@keyframes splashDots {
+
+    0%,
+    80%,
+    100% {
+
+        opacity: 0.25;
+
+        transform: translateY(0);
+
+    }
+
+    40% {
+
+        opacity: 1;
+
+        transform: translateY(-4px);
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .logoCircle {
+
+        width: 110px;
+        height: 110px;
+
+        font-size: 57px;
+
+    }
+
+
+    .splash h1 {
+
+        margin-top: 24px;
+
+        font-size: 42px;
+
+    }
+
+
+    .splash p {
+
+        padding: 0 25px;
+
+        font-size: 15px;
+
+    }
+
+
+    .splash-bottle-left {
+
+        left: -60px;
+
+        bottom: 5%;
+
+    }
+
+
+    .splash-bottle-right {
+
+        right: -55px;
+
+        top: 8%;
+
+    }
+
+
+    .splash-glass {
+
+        right: -25px;
+
+        bottom: 18%;
+
+        opacity: 0.45;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logoCircle {
+
+        width: 95px;
+        height: 95px;
+
+        font-size: 49px;
+
+    }
+
+
+    .splash h1 {
+
+        margin-top: 22px;
+
+        font-size: 34px;
+
+        letter-spacing: -0.8px;
+
+    }
+
+
+    .splash p {
+
+        max-width: 330px;
+
+        font-size: 14px;
+
+    }
+
+
+    .splash-bottle-left,
+    .splash-bottle-right {
+
+        opacity: 0.35;
+
+    }
+
+
+    .splash-glass {
+
+        display: none;
+
+    }
+
+}

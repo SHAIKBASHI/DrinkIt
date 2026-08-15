@@ -1,0 +1,1185 @@
+/* =========================================================
+   DRINKIT PREMIUM ORDER TRACKING
+========================================================= */
+
+.tracking-page {
+    min-height: 100vh;
+    padding: 35px 20px 100px;
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 8% 15%,
+            rgba(30, 142, 62, 0.13),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 92% 85%,
+            rgba(52, 168, 83, 0.10),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #f4faf6 0%,
+            #f8fbf9 45%,
+            #edf7f0 100%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIONS
+========================================================= */
+
+.tracking-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    top: -180px;
+    right: -150px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(30, 142, 62, 0.10);
+
+    box-shadow:
+        0 0 0 35px rgba(30, 142, 62, 0.025),
+        0 0 0 70px rgba(30, 142, 62, 0.018);
+
+    pointer-events: none;
+}
+
+
+.tracking-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    bottom: -150px;
+    left: -110px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(30, 142, 62, 0.08);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.tracking-page > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.tracking-page h1 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #142019;
+
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+.tracking-subtitle {
+    margin: 9px auto 0;
+
+    text-align: center;
+
+    color: #718078;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ETA BADGE
+========================================================= */
+
+.delivery-time {
+    width: fit-content;
+
+    margin: 18px auto 28px;
+
+    padding: 9px 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid #d4e8da;
+
+    color: #1e7f3a;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    box-shadow:
+        0 6px 18px rgba(30, 142, 62, 0.08);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   HERO TRACKING STATUS
+========================================================= */
+
+.tracking-hero {
+    max-width: 760px;
+
+    margin: 0 auto 25px;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #168f4d 0%,
+            #1e9b52 48%,
+            #34a853 100%
+        );
+
+    color: white;
+
+    box-shadow:
+        0 18px 45px rgba(30, 142, 62, 0.22);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* Decorative circle */
+
+.tracking-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    right: -70px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 0 0 25px rgba(255, 255, 255, 0.04),
+        0 0 0 50px rgba(255, 255, 255, 0.025);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.tracking-hero-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.tracking-hero-icon {
+    width: 66px;
+    height: 66px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    font-size: 30px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.20);
+}
+
+
+.tracking-hero-text h2 {
+    margin: 0 0 6px;
+
+    font-size: 23px;
+
+    font-weight: 800;
+}
+
+
+.tracking-hero-text p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TRACKING PROGRESS
+========================================================= */
+
+.tracking-progress {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    margin-top: 30px;
+
+    padding: 0 5px;
+}
+
+
+/* Background line */
+
+.tracking-progress::before {
+    content: "";
+
+    position: absolute;
+
+    left: 10%;
+
+    right: 10%;
+
+    top: 18px;
+
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.22);
+}
+
+
+/* Active progress line */
+
+.tracking-progress::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10%;
+
+    width: 55%;
+
+    top: 18px;
+
+    height: 4px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   PROGRESS STEP
+========================================================= */
+
+.progress-step {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 9px;
+
+    text-align: center;
+}
+
+
+.progress-circle {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 3px solid rgba(255, 255, 255, 0.35);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    box-sizing: border-box;
+}
+
+
+.progress-step.completed .progress-circle,
+.progress-step.active .progress-circle {
+    background: white;
+
+    color: #1e8e3e;
+
+    border-color: white;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.progress-step span {
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    white-space: nowrap;
+}
+
+
+.progress-step.active span,
+.progress-step.completed span {
+    color: white;
+}
+
+
+/* =========================================================
+   TIMELINE CARD
+========================================================= */
+
+.tracking-container {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 24px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid #e0ebe4;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(24, 61, 37, 0.07);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.tracking-container {
+    position: relative;
+}
+
+
+/* Timeline line */
+
+.tracking-container::before {
+    content: "";
+
+    position: absolute;
+
+    left: 45px;
+
+    top: 55px;
+
+    bottom: 55px;
+
+    width: 3px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #1e8e3e 0%,
+            #1e8e3e 60%,
+            #dce7df 60%,
+            #dce7df 100%
+        );
+}
+
+
+/* =========================================================
+   TRACKING STEP
+========================================================= */
+
+.tracking-step {
+    position: relative;
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+
+    z-index: 2;
+}
+
+
+.tracking-step:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TIMELINE CIRCLE
+========================================================= */
+
+.circle {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e7ede9;
+
+    color: #8b968f;
+
+    border: 4px solid white;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.06);
+
+    box-sizing: border-box;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   STEP CONTENT
+========================================================= */
+
+.step-content {
+    flex: 1;
+
+    padding: 14px 17px;
+
+    border-radius: 14px;
+
+    background: #f8faf9;
+
+    border: 1px solid #e8eeea;
+
+    transition: all 0.25s ease;
+}
+
+
+.step-content h3 {
+    margin: 0 0 4px;
+
+    color: #26352c;
+
+    font-size: 15px;
+
+    font-weight: 750;
+}
+
+
+.step-content p {
+    margin: 0;
+
+    color: #7b867f;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACTIVE STEP
+========================================================= */
+
+.tracking-step.active .circle {
+    background:
+        linear-gradient(
+            145deg,
+            #168f4d,
+            #34a853
+        );
+
+    color: white;
+
+    border-color: white;
+
+    box-shadow:
+        0 0 0 5px rgba(30, 142, 62, 0.10),
+        0 7px 18px rgba(30, 142, 62, 0.25);
+}
+
+
+.tracking-step.active .step-content {
+    background:
+        linear-gradient(
+            135deg,
+            #f0faf3,
+            #ffffff
+        );
+
+    border-color: #c9e4d1;
+
+    box-shadow:
+        0 8px 22px rgba(30, 142, 62, 0.08);
+}
+
+
+.tracking-step.active .step-content h3 {
+    color: #1e7f3a;
+}
+
+
+/* =========================================================
+   MAP / DELIVERY VISUAL
+========================================================= */
+
+.map-card {
+    max-width: 760px;
+
+    margin: 22px auto 0;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #dfebe3;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 32px rgba(24, 61, 37, 0.07);
+}
+
+
+.map-placeholder {
+    height: 230px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf6ed,
+            #f8fbf9
+        );
+}
+
+
+/* Road-like decorative paths */
+
+.map-placeholder::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120%;
+    height: 90px;
+
+    transform: rotate(-12deg);
+
+    border-top: 3px dashed rgba(30, 142, 62, 0.16);
+
+    border-bottom: 3px dashed rgba(30, 142, 62, 0.08);
+}
+
+
+.map-placeholder::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 1px dashed rgba(30, 142, 62, 0.16);
+}
+
+
+/* Map content */
+
+.map-placeholder svg {
+    position: relative;
+
+    z-index: 3;
+
+    color: #1e8e3e;
+
+    font-size: 44px;
+
+    filter:
+        drop-shadow(
+            0 6px 10px
+            rgba(30, 142, 62, 0.18)
+        );
+}
+
+
+.map-placeholder span {
+    position: absolute;
+
+    z-index: 4;
+
+    bottom: 22px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.86);
+
+    border: 1px solid rgba(30, 142, 62, 0.12);
+
+    color: #52705c;
+
+    font-size: 11px;
+
+    font-weight: 650;
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* =========================================================
+   RIDER CARD
+========================================================= */
+
+.rider-card {
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #dfebe3;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 25px rgba(24, 61, 37, 0.06);
+}
+
+
+.rider-card img {
+    width: 62px;
+    height: 62px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid #e4f2e8;
+
+    box-shadow:
+        0 5px 14px rgba(30, 142, 62, 0.12);
+}
+
+
+.rider-info {
+    flex: 1;
+}
+
+
+.rider-info h3 {
+    margin: 0 0 4px;
+
+    color: #1c2b22;
+
+    font-size: 16px;
+}
+
+
+.rider-info p {
+    margin: 0;
+
+    color: #77827b;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTACT BUTTONS
+========================================================= */
+
+.contact-buttons {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.contact-buttons button {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d6e8db;
+
+    background: #f1f8f3;
+
+    color: #1e8e3e;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.contact-buttons button:hover {
+    background: #1e8e3e;
+
+    color: white;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 16px rgba(30, 142, 62, 0.20);
+}
+
+
+/* =========================================================
+   ADDRESS / SUMMARY
+========================================================= */
+
+.address-card,
+.summary-card {
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #dfebe3;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 24px rgba(24, 61, 37, 0.05);
+}
+
+
+.address-card h3,
+.summary-card h3 {
+    margin: 0 0 13px;
+
+    color: #1d2b22;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 9px 0;
+
+    color: #718078;
+
+    font-size: 13px;
+}
+
+
+.total {
+    margin-top: 8px;
+
+    padding-top: 14px;
+
+    border-top: 1px solid #e5ece7;
+
+    color: #1e8e3e;
+
+    font-size: 21px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CONTINUE BUTTON
+========================================================= */
+
+.continue-btn {
+    display: block;
+
+    width: 100%;
+
+    max-width: 760px;
+
+    min-height: 52px;
+
+    margin: 25px auto 0;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #168f4d,
+            #34a853
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(30, 142, 62, 0.20);
+
+    transition: all 0.2s ease;
+}
+
+
+.continue-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(30, 142, 62, 0.26);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .tracking-page {
+        padding: 28px 14px 80px;
+    }
+
+
+    .tracking-page h1 {
+        font-size: 28px;
+    }
+
+
+    .tracking-subtitle {
+        font-size: 13px;
+    }
+
+
+    .tracking-hero {
+        padding: 22px 18px;
+
+        border-radius: 20px;
+    }
+
+
+    .tracking-hero-content {
+        gap: 13px;
+    }
+
+
+    .tracking-hero-icon {
+        width: 54px;
+        height: 54px;
+
+        border-radius: 16px;
+
+        font-size: 24px;
+    }
+
+
+    .tracking-hero-text h2 {
+        font-size: 19px;
+    }
+
+
+    .tracking-hero-text p {
+        font-size: 11px;
+    }
+
+
+    .tracking-progress {
+        margin-top: 24px;
+    }
+
+
+    .progress-circle {
+        width: 32px;
+        height: 32px;
+
+        font-size: 11px;
+    }
+
+
+    .tracking-progress::before,
+    .tracking-progress::after {
+        top: 15px;
+    }
+
+
+    .progress-step span {
+        font-size: 8px;
+    }
+
+
+    .tracking-container {
+        padding: 18px 14px;
+
+        border-radius: 18px;
+    }
+
+
+    .tracking-container::before {
+        left: 35px;
+
+        top: 48px;
+
+        bottom: 48px;
+    }
+
+
+    .tracking-step {
+        gap: 13px;
+
+        min-height: 64px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .circle {
+        width: 38px;
+        height: 38px;
+
+        font-size: 11px;
+    }
+
+
+    .step-content {
+        padding: 11px 12px;
+    }
+
+
+    .step-content h3 {
+        font-size: 13px;
+    }
+
+
+    .step-content p {
+        font-size: 11px;
+    }
+
+
+    .map-placeholder {
+        height: 190px;
+    }
+
+
+    .rider-card {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        padding: 15px;
+    }
+
+
+    .rider-info {
+        min-width: 150px;
+    }
+
+
+    .contact-buttons {
+        width: 100%;
+        margin-top: 3px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .tracking-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .tracking-page h1 {
+        font-size: 25px;
+    }
+
+
+    .tracking-hero {
+        padding: 19px 14px;
+    }
+
+
+    .tracking-hero-text h2 {
+        font-size: 17px;
+    }
+
+
+    .tracking-progress {
+        padding: 0;
+    }
+
+
+    .progress-step span {
+        font-size: 7px;
+    }
+
+
+    .tracking-container {
+        padding: 15px 10px;
+    }
+
+
+    .tracking-container::before {
+        left: 28px;
+    }
+
+
+    .circle {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .step-content {
+        padding: 10px;
+    }
+
+
+    .rider-card,
+    .address-card,
+    .summary-card {
+        padding: 14px;
+    }
+
+}

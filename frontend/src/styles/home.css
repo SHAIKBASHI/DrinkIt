@@ -1,0 +1,1058 @@
+/* =========================================================
+   HOME PAGE - DRINKIT / BLINKIT STYLE
+========================================================= */
+
+.home-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #f7f7f7;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.home-header {
+    padding: 18px 32px;
+    background: #ffffff;
+}
+
+.home-header small {
+    color: #6b6b6b;
+    font-size: 13px;
+}
+
+.home-header h3 {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 4px 0 0;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-container {
+    margin: 0 32px;
+    background: #f3f3f3;
+    border: 1px solid #e2e2e2;
+
+    display: flex;
+    align-items: center;
+
+    padding: 13px 16px;
+
+    border-radius: 10px;
+
+    max-width: 500px;
+
+    box-sizing: border-box;
+}
+
+.search-icon {
+    color: #555;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    width: 100%;
+
+    font-size: 15px;
+    color: #222;
+}
+
+.search-container input::placeholder {
+    color: #777;
+}
+
+
+/* =========================================================
+   COMMON SECTION CONTAINER
+========================================================= */
+
+.section-container {
+    width: calc(100% - 48px);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO BANNER
+========================================================= */
+
+.hero-banner {
+    width: calc(100% - 48px);
+
+    margin: 24px auto 28px;
+
+    background: linear-gradient(
+        135deg,
+        #0c831f,
+        #16a637
+    );
+
+    color: white;
+
+    padding: 42px 46px;
+
+    border-radius: 18px;
+
+    min-height: 300px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.hero-banner h2 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 0 0 16px;
+    font-weight: 700;
+}
+
+.hero-banner p {
+    margin: 0 0 24px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.hero-banner button {
+    background: #ffffff;
+    color: #0c831f;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.hero-banner button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    width: calc(100% - 48px);
+    max-width: 1400px;
+
+    margin: 30px auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: #1f1f1f;
+}
+
+.section-heading button {
+    background: #ffffff;
+
+    color: #0c831f;
+
+    border: 1px solid #0c831f;
+
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: all 0.2s ease;
+}
+
+.section-heading button:hover {
+    background: #0c831f;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.category-grid {
+    width: calc(100% - 48px);
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+}
+
+.category-card {
+    background: #ffffff;
+
+    text-align: center;
+
+    padding: 22px 12px;
+
+    min-height: 120px;
+
+    border-radius: 14px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.09);
+}
+
+.emoji {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+.category-card h4 {
+    margin: 0;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.product-grid {
+    width: calc(100% - 48px);
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    border: 1px solid #eeeeee;
+
+    padding: 12px;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   OFFER BADGE
+========================================================= */
+
+.offer-badge {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    z-index: 2;
+
+    background: #e53935;
+
+    color: white;
+
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   WISHLIST
+========================================================= */
+
+.wishlist-btn {
+    position: absolute;
+
+    right: 10px;
+    top: 10px;
+
+    z-index: 2;
+
+    background: #f5f5f5;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    color: #e53935;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.wishlist-btn:hover {
+    background: #eeeeee;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.product-image {
+    width: 100%;
+
+    height: 190px;
+
+    margin: 8px 0 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+/*
+   IMPORTANT:
+   This makes your bottle images fit correctly.
+*/
+
+.product-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: transform 0.25s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
+}
+
+
+/* fallback emoji/image */
+.product-image:has(> :not(img)) {
+    font-size: 55px;
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+.product-card h3 {
+    margin: 8px 0 5px;
+
+    font-size: 15px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    color: #1f1f1f;
+}
+
+.product-card small {
+    display: block;
+
+    color: #777;
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   RATING
+========================================================= */
+
+.rating {
+    margin: 7px 0;
+
+    color: #f59e0b;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.price-row h2 {
+    color: #1f1f1f;
+
+    font-size: 18px;
+
+    margin: 0;
+
+    font-weight: 700;
+}
+
+.price-row button {
+    background: #0c831f;
+
+    color: white;
+
+    border: none;
+
+    padding: 9px 14px;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    gap: 5px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.price-row button:hover {
+    background: #096b19;
+}
+
+
+/* =========================================================
+   OFFER BANNER
+========================================================= */
+
+.offer-banner {
+    width: calc(100% - 48px);
+
+    max-width: 1400px;
+
+    margin: 28px auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb000,
+            #ff7a00
+        );
+
+    border-radius: 18px;
+
+    padding: 40px 32px;
+
+    color: white;
+
+    box-sizing: border-box;
+
+    min-height: 260px;
+}
+
+.offer-banner h2 {
+    margin: 0 0 12px;
+
+    font-size: 34px;
+
+    font-weight: 700;
+}
+
+.offer-banner p {
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+.offer-banner button {
+    margin-top: 18px;
+
+    background: white;
+
+    color: #ff6f00;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RECOVERY BANNER
+========================================================= */
+
+.recovery-banner-home {
+    width: calc(100% - 48px);
+
+    max-width: 1400px;
+
+    margin: 28px auto;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0c831f,
+            #21a43a
+        );
+
+    padding: 40px 32px;
+
+    border-radius: 18px;
+
+    color: white;
+
+    box-sizing: border-box;
+
+    min-height: 250px;
+}
+
+.recovery-banner-home h2 {
+    font-size: 32px;
+
+    margin: 0 0 12px;
+}
+
+.recovery-banner-home button {
+    margin-top: 18px;
+
+    background: white;
+
+    color: #0c831f;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   COINS
+========================================================= */
+
+.coins-banner {
+    width: calc(100% - 48px);
+
+    max-width: 1400px;
+
+    margin: 28px auto;
+
+    padding: 25px;
+
+    background: #fff7dc;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.06);
+
+    box-sizing: border-box;
+}
+
+.coins-banner h2 {
+    color: #e88b00;
+
+    margin-bottom: 10px;
+}
+
+.coins-banner button {
+    background: #0c831f;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   DELIVERY
+========================================================= */
+
+.delivery-card {
+    width: calc(100% - 48px);
+
+    max-width: 1400px;
+
+    margin: 28px auto;
+
+    padding: 24px;
+
+    border-radius: 16px;
+
+    background: #edf8ef;
+
+    border-left: 5px solid #0c831f;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RECOMMENDED
+========================================================= */
+
+.recommend-grid {
+    width: calc(100% - 48px);
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.recommend-card {
+    background: white;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.recommend-image {
+    height: 170px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    overflow: hidden;
+}
+
+.recommend-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.recommend-card h3 {
+    color: #222;
+
+    margin: 10px 0;
+
+    font-size: 15px;
+}
+
+.recommend-card button {
+    background: #0c831f;
+
+    color: white;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin: auto;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .product-grid,
+    .recommend-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero-banner {
+        min-height: 270px;
+
+        padding: 35px;
+    }
+
+    .hero-banner h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .product-grid,
+    .recommend-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    .section-heading {
+        margin-top: 25px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .home-header {
+        padding: 15px;
+    }
+
+    .search-container {
+        margin: 0 15px;
+
+        max-width: none;
+    }
+
+    .hero-banner,
+    .offer-banner,
+    .recovery-banner-home {
+        width: calc(100% - 24px);
+
+        margin: 18px auto;
+
+        padding: 28px 22px;
+
+        border-radius: 15px;
+
+        min-height: 220px;
+    }
+
+    .hero-banner h2 {
+        font-size: 27px;
+    }
+
+    .hero-banner p {
+        font-size: 14px;
+    }
+
+    .offer-banner h2 {
+        font-size: 27px;
+    }
+
+    .recovery-banner-home h2 {
+        font-size: 27px;
+    }
+
+    .section-heading {
+        width: calc(100% - 24px);
+
+        margin: 24px auto 15px;
+
+        padding: 0;
+
+        gap: 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 21px;
+    }
+
+    .section-heading button {
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+    .category-grid {
+        width: calc(100% - 24px);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .category-card {
+        min-height: 100px;
+
+        padding: 18px 8px;
+    }
+
+    .product-grid,
+    .recommend-grid {
+        width: calc(100% - 24px);
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .product-card {
+        padding: 10px;
+
+        border-radius: 12px;
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+    }
+
+    .price-row {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .price-row h2 {
+        font-size: 17px;
+    }
+
+    .price-row button {
+        width: 100%;
+    }
+
+    .coins-banner {
+        width: calc(100% - 24px);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .delivery-card {
+        width: calc(100% - 24px);
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .product-grid,
+    .recommend-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .section-heading h2 {
+        font-size: 19px;
+    }
+}
+
+
+
+

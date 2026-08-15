@@ -1,0 +1,128 @@
+.rewards-page{
+    padding:20px;
+    padding-bottom:100px;
+}
+
+.wallet-card{
+    background:linear-gradient(135deg,#1E8E3E,#34A853);
+    color:white;
+    text-align:center;
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.wallet-icon{
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.wallet-card h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.progress-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.progress-bar{
+    height:12px;
+    background:#E5E7EB;
+    border-radius:20px;
+    margin:15px 0;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    background:#1E8E3E;
+}
+
+.reward-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.reward-card{
+    display:flex;
+    align-items:center;
+    background:white;
+    padding:18px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.reward-icon{
+    font-size:28px;
+    color:#1E8E3E;
+    margin-right:15px;
+}
+
+.reward-info{
+    flex:1;
+}
+
+.reward-info h4{
+    margin-bottom:5px;
+}
+
+.reward-info p{
+    color:#1E8E3E;
+    font-weight:bold;
+}
+
+.reward-card button{
+    background:#1E8E3E;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+}
+
+.achievement-card{
+    margin:30px 0;
+    background:#F4FFF6;
+    padding:20px;
+    border-left:6px solid #1E8E3E;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.achievement-icon{
+    font-size:35px;
+    color:#1E8E3E;
+}
+
+.history-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.history-card{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+.plus{
+    color:#16A34A;
+    font-weight:bold;
+}
+
+.minus{
+    color:#DC2626;
+    font-weight:bold;
+}

@@ -1,0 +1,896 @@
+/* =========================================
+   RECOVERY PAGE
+========================================= */
+
+.recovery-page {
+  padding: 25px;
+  padding-bottom: 110px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.recovery-banner {
+  background: linear-gradient(
+    135deg,
+    #147d3c,
+    #20a04b
+  );
+
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  margin-bottom: 25px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 30px rgba(20, 125, 60, 0.18);
+}
+
+
+.recovery-banner-content {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+.recovery-badge {
+  display: inline-block;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 14px;
+}
+
+
+.recovery-banner h1 {
+  font-size: 38px;
+
+  margin: 0 0 10px;
+
+  font-weight: 800;
+}
+
+
+.recovery-banner p {
+  max-width: 550px;
+
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  opacity: 0.95;
+}
+
+
+.recovery-banner-icon {
+  width: 120px;
+
+  height: 120px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 65px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   HEALTH TIPS
+========================================= */
+
+.health-tip {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  margin-bottom: 35px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.health-tip-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+
+.small-label {
+  color: #1e8e3e;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.health-tip h2 {
+  margin: 5px 0 0;
+
+  font-size: 25px;
+}
+
+
+.health-tip-symbol {
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: #effaf2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 25px;
+}
+
+
+.health-tip-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+
+.health-tip-item {
+  background: #f7fbf8;
+
+  border-radius: 14px;
+
+  padding: 18px;
+
+  display: flex;
+
+  gap: 12px;
+
+  align-items: flex-start;
+}
+
+
+.health-tip-item svg {
+  color: #1e8e3e;
+
+  font-size: 18px;
+
+  margin-top: 2px;
+
+  flex-shrink: 0;
+}
+
+
+.health-tip-item strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 14px;
+}
+
+
+.health-tip-item p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.recovery-section-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 20px;
+}
+
+
+.recovery-section-heading h2 {
+  margin: 5px 0 0;
+
+  font-size: 27px;
+}
+
+
+.recovery-count {
+  color: #1e8e3e;
+
+  background: #effaf2;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.recovery-product-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.recovery-product-card {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  overflow: hidden;
+}
+
+
+.recovery-product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================================
+   PRODUCT IMAGE
+========================================= */
+
+.recovery-product-image {
+  height: 180px;
+
+  border-radius: 15px;
+
+  background: #f5faf6;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  overflow: hidden;
+}
+
+
+.recovery-product-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 15px;
+}
+
+
+.recovery-product-icon {
+  width: 75px;
+
+  height: 75px;
+
+  border-radius: 50%;
+
+  background: #e8f5e9;
+
+  color: #1e8e3e;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 35px;
+}
+
+
+/* =========================================
+   PRODUCT DETAILS
+========================================= */
+
+.recovery-product-category {
+  display: inline-block;
+
+  color: #1e8e3e;
+
+  background: #effaf2;
+
+  padding: 5px 9px;
+
+  border-radius: 15px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+
+.recovery-product-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+}
+
+
+.recovery-product-description {
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  min-height: 36px;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.recovery-product-bottom {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+
+.price-label {
+  display: block;
+
+  color: #999;
+
+  font-size: 10px;
+
+  margin-bottom: 2px;
+}
+
+
+.recovery-product-bottom strong {
+  color: #1e8e3e;
+
+  font-size: 22px;
+}
+
+
+.stock-label {
+  color: #1e8e3e;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  background: #effaf2;
+
+  padding: 5px 8px;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.recovery-add-btn {
+  width: 100%;
+
+  border: none;
+
+  background: #1e8e3e;
+
+  color: white;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.recovery-add-btn:hover {
+  background: #176f31;
+}
+
+
+.recovery-add-btn:disabled {
+  background: #b7c8bc;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.recovery-loading {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #777;
+}
+
+
+.recovery-spinner {
+  width: 35px;
+
+  height: 35px;
+
+  border: 4px solid #dcefe1;
+
+  border-top-color: #1e8e3e;
+
+  border-radius: 50%;
+
+  animation: recoverySpin 0.8s linear infinite;
+
+  margin-bottom: 12px;
+}
+
+
+@keyframes recoverySpin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.recovery-empty {
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 50px;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+.recovery-empty > div {
+  font-size: 45px;
+
+  margin-bottom: 10px;
+}
+
+
+.recovery-empty h3 {
+  margin-bottom: 8px;
+}
+
+
+.recovery-empty p {
+  color: #777;
+}
+
+
+/* =========================================
+   RECOVERY KIT
+========================================= */
+
+.kit-card {
+  margin-top: 35px;
+
+  background: linear-gradient(
+    135deg,
+    #fff8df,
+    #fffdf3
+  );
+
+  border: 1px solid #f4e8b7;
+
+  border-radius: 22px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+.kit-badge {
+  display: inline-block;
+
+  background: #e9b949;
+
+  color: white;
+
+  padding: 6px 10px;
+
+  border-radius: 15px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+
+  margin-bottom: 12px;
+}
+
+
+.kit-card h2 {
+  margin: 0 0 8px;
+
+  font-size: 27px;
+}
+
+
+.kit-description {
+  color: #666;
+
+  margin: 0 0 20px;
+
+  line-height: 1.5;
+}
+
+
+.kit-products {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+
+.kit-products span {
+  background: white;
+
+  border: 1px solid #eadfb8;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  color: #555;
+}
+
+
+.kit-products span::first-letter {
+  color: #1e8e3e;
+}
+
+
+.kit-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.kit-bottom span {
+  display: block;
+
+  font-size: 11px;
+
+  color: #888;
+}
+
+
+.kit-bottom strong {
+  display: block;
+
+  color: #1e8e3e;
+
+  font-size: 28px;
+}
+
+
+.kit-button {
+  border: none;
+
+  background: #1e8e3e;
+
+  color: white;
+
+  padding: 13px 20px;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+.kit-button:hover {
+  background: #176f31;
+}
+
+
+.kit-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   REWARD CARD
+========================================= */
+
+.reward-card {
+  margin-top: 25px;
+
+  padding: 22px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  border-left: 5px solid #1e8e3e;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+.reward-icon {
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #fff5cf;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+}
+
+
+.reward-card h3 {
+  margin: 4px 0 5px;
+
+  font-size: 18px;
+}
+
+
+.reward-card p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .recovery-product-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .health-tip-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .recovery-page {
+    padding: 15px;
+
+    padding-bottom: 100px;
+  }
+
+
+  .recovery-banner {
+    padding: 25px;
+
+    border-radius: 18px;
+  }
+
+
+  .recovery-banner-content {
+    align-items: flex-start;
+  }
+
+
+  .recovery-banner h1 {
+    font-size: 30px;
+  }
+
+
+  .recovery-banner-icon {
+    width: 75px;
+
+    height: 75px;
+
+    font-size: 40px;
+  }
+
+
+  .health-tip-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .recovery-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .recovery-section-heading {
+    align-items: flex-start;
+
+    gap: 10px;
+
+    flex-direction: column;
+  }
+
+
+  .kit-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+
+  .kit-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .reward-card {
+    align-items: flex-start;
+  }
+
+}

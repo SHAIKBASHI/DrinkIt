@@ -1,0 +1,1364 @@
+/* =========================================================
+   DRINKIT — PREMIUM SETTINGS PAGE
+========================================================= */
+
+:root {
+
+    --settings-green: #168f4d;
+    --settings-green-dark: #0f713b;
+    --settings-green-light: #2aae60;
+
+    --settings-bg: #f4f8f5;
+
+    --settings-text: #17231b;
+    --settings-muted: #6b7770;
+
+    --settings-border: #e1ebe4;
+
+    --settings-card: #ffffff;
+
+    --settings-shadow:
+        0 10px 30px rgba(25, 70, 40, 0.07);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.settings-page {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 28px 20px 90px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 5% 5%,
+            rgba(30, 142, 62, 0.09),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 95% 40%,
+            rgba(52, 168, 83, 0.07),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #f8fbf9 0%,
+            #f1f7f3 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.settings-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -170px;
+    top: 80px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(30, 142, 62, 0.07);
+
+    box-shadow:
+        0 0 0 35px rgba(30, 142, 62, 0.025),
+        0 0 0 70px rgba(30, 142, 62, 0.015);
+
+    pointer-events: none;
+}
+
+
+.settings-page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    left: -120px;
+    bottom: 100px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(30, 142, 62, 0.06);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.settings-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.settings-top {
+
+    margin-bottom: 22px;
+}
+
+
+.back-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    border: 1px solid var(--settings-border);
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.80);
+
+    color: var(--settings-muted);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.back-btn:hover {
+
+    background: white;
+
+    color: var(--settings-green);
+
+    border-color: #c7dfce;
+
+    transform:
+        translateX(-2px);
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.settings-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.settings-heading-icon {
+
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5f5e9,
+            #f2faf4
+        );
+
+    border:
+        1px solid #d6ebdc;
+
+    color: var(--settings-green);
+
+    font-size: 20px;
+
+    box-shadow:
+        0 6px 18px rgba(22,143,77,0.08);
+}
+
+
+.settings-heading h1 {
+
+    margin: 0 0 4px;
+
+    color: var(--settings-text);
+
+    font-size: 29px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.6px;
+}
+
+
+.settings-heading p {
+
+    margin: 0;
+
+    color: var(--settings-muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.settings-card {
+
+    margin-bottom: 18px;
+
+    padding: 22px;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border:
+        1px solid var(--settings-border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        var(--settings-shadow);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.settings-card-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.settings-card-heading h2 {
+
+    margin: 0 0 5px;
+
+    color: var(--settings-text);
+
+    font-size: 17px;
+
+    font-weight: 750;
+}
+
+
+.settings-card-heading p {
+
+    margin: 0;
+
+    color: var(--settings-muted);
+
+    font-size: 11px;
+}
+
+
+.settings-card-heading > svg {
+
+    flex-shrink: 0;
+
+    color: #b7cdbd;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.settings-row {
+
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 13px 2px;
+
+    border-bottom:
+        1px solid #edf2ee;
+}
+
+
+.settings-row:last-child {
+
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   ROW LEFT
+========================================================= */
+
+.settings-row-left {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.settings-row-left > div:last-child {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.settings-icon {
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        #edf8f0;
+
+    color: var(--settings-green);
+
+    font-size: 15px;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.settings-row:hover .settings-icon {
+
+    transform:
+        scale(1.04);
+
+    background:
+        #e2f3e7;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.settings-row-left strong {
+
+    color: var(--settings-text);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.settings-row-left span {
+
+    max-width: 500px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: var(--settings-muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   EDIT BUTTON
+========================================================= */
+
+.edit-btn {
+
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 11px;
+
+    border:
+        1px solid #cfe4d5;
+
+    border-radius: 8px;
+
+    background:
+        #f7fcf8;
+
+    color: var(--settings-green);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.edit-btn:hover {
+
+    background:
+        var(--settings-green);
+
+    border-color:
+        var(--settings-green);
+
+    color: white;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   EDIT INPUT
+========================================================= */
+
+.settings-edit-input {
+
+    width: min(400px, 100%);
+
+    height: 36px;
+
+    padding:
+        0
+        11px;
+
+    border:
+        1px solid #cfe1d4;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background:
+        #fbfdfb;
+
+    color:
+        var(--settings-text);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    box-sizing: border-box;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.settings-edit-input:focus {
+
+    background: white;
+
+    border-color:
+        var(--settings-green);
+
+    box-shadow:
+        0 0 0 3px rgba(22,143,77,0.08);
+}
+
+
+/* =========================================================
+   EDIT ACTIONS
+========================================================= */
+
+.edit-actions {
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.save-btn,
+.cancel-btn {
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.save-btn {
+
+    border:
+        1px solid #b9dec4;
+
+    background:
+        #edf8f0;
+
+    color:
+        var(--settings-green);
+}
+
+
+.save-btn:hover {
+
+    background:
+        var(--settings-green);
+
+    color: white;
+}
+
+
+.cancel-btn {
+
+    border:
+        1px solid #ead2d2;
+
+    background:
+        #fff7f7;
+
+    color:
+        #c65b5b;
+}
+
+
+.cancel-btn:hover {
+
+    background:
+        #dc2626;
+
+    border-color:
+        #dc2626;
+
+    color: white;
+}
+
+
+/* =========================================================
+   CLICKABLE ROW
+========================================================= */
+
+.clickable {
+
+    cursor: pointer;
+
+    border-radius: 10px;
+
+    transition:
+        background 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.clickable:hover {
+
+    background:
+        #f6faf7;
+
+    padding-left: 8px;
+}
+
+
+.row-arrow {
+
+    flex-shrink: 0;
+
+    color:
+        #91a199;
+
+    font-size: 18px;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.clickable:hover .row-arrow {
+
+    color:
+        var(--settings-green);
+
+    transform:
+        translateX(3px);
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.switch {
+
+    position: relative;
+
+    width: 48px;
+    height: 26px;
+
+    flex-shrink: 0;
+}
+
+
+.switch input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        #d5ddd8;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: 3px;
+    top: 3px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,0.15);
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.switch input:checked + .slider {
+
+    background:
+        var(--settings-green);
+
+    box-shadow:
+        0 3px 10px rgba(22,143,77,0.20);
+}
+
+
+.switch input:checked + .slider::before {
+
+    transform:
+        translateX(22px);
+}
+
+
+/* =========================================================
+   INFO BOX
+========================================================= */
+
+.settings-info {
+
+    margin-bottom: 18px;
+
+    padding: 14px 16px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    border:
+        1px solid #dcebe0;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f2faf4,
+            #f9fcfa
+        );
+
+    color:
+        var(--settings-green);
+}
+
+
+.settings-info > svg {
+
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    font-size: 15px;
+}
+
+
+.settings-info strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color:
+        #315d42;
+
+    font-size: 12px;
+}
+
+
+.settings-info p {
+
+    margin: 0;
+
+    color:
+        #718077;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.settings-logout {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 0 16px;
+
+    border:
+        1px solid #efcccc;
+
+    border-radius: 11px;
+
+    background:
+        rgba(255,255,255,0.88);
+
+    color:
+        #c94040;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.settings-logout:hover {
+
+    background:
+        #dc2626;
+
+    border-color:
+        #dc2626;
+
+    color:
+        white;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(220,38,38,0.15);
+}
+
+
+/* =========================================================
+   VERSION
+========================================================= */
+
+.settings-version {
+
+    margin: 18px 0 0;
+
+    text-align: center;
+
+    color:
+        #9aa69f;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   NOT LOGGED IN
+========================================================= */
+
+.settings-empty {
+
+    max-width: 480px;
+
+    margin:
+        100px auto;
+
+    padding:
+        40px 30px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border:
+        1px solid var(--settings-border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        var(--settings-shadow);
+}
+
+
+.settings-empty-icon {
+
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        #edf8f0;
+
+    color:
+        var(--settings-green);
+
+    font-size: 22px;
+}
+
+
+.settings-empty h2 {
+
+    margin:
+        0 0 8px;
+
+    color:
+        var(--settings-text);
+
+    font-size: 21px;
+}
+
+
+.settings-empty p {
+
+    margin:
+        0 0 20px;
+
+    color:
+        var(--settings-muted);
+
+    font-size: 13px;
+}
+
+
+.settings-login-btn {
+
+    padding:
+        11px 25px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--settings-green),
+            var(--settings-green-light)
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 17px rgba(22,143,77,0.16);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .settings-page {
+
+        padding:
+            22px
+            15px
+            80px;
+    }
+
+
+    .settings-heading h1 {
+
+        font-size: 25px;
+    }
+
+
+    .settings-card {
+
+        padding:
+            18px;
+
+        border-radius: 16px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .settings-page {
+
+        padding:
+            16px
+            11px
+            75px;
+    }
+
+
+    .settings-heading {
+
+        gap: 11px;
+
+        margin-bottom: 17px;
+    }
+
+
+    .settings-heading-icon {
+
+        width: 45px;
+        height: 45px;
+
+        border-radius: 13px;
+
+        font-size: 17px;
+    }
+
+
+    .settings-heading h1 {
+
+        font-size: 22px;
+    }
+
+
+    .settings-heading p {
+
+        font-size: 11px;
+    }
+
+
+    .settings-card {
+
+        padding:
+            15px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .settings-card-heading h2 {
+
+        font-size: 15px;
+    }
+
+
+    .settings-card-heading p {
+
+        font-size: 10px;
+    }
+
+
+    .settings-row {
+
+        min-height: 60px;
+
+        gap: 8px;
+
+        padding:
+            11px
+            0;
+    }
+
+
+    .settings-row-left {
+
+        gap: 10px;
+    }
+
+
+    .settings-icon {
+
+        width: 36px;
+        height: 36px;
+
+        border-radius: 9px;
+
+        font-size: 13px;
+    }
+
+
+    .settings-row-left strong {
+
+        font-size: 12px;
+    }
+
+
+    .settings-row-left span {
+
+        max-width: 220px;
+
+        font-size: 10px;
+    }
+
+
+    .edit-btn {
+
+        padding:
+            6px
+            8px;
+
+        font-size: 10px;
+    }
+
+
+    .edit-btn span {
+
+        display: none;
+    }
+
+
+    .settings-edit-input {
+
+        width: 170px;
+
+        height: 34px;
+
+        font-size: 11px;
+    }
+
+
+    .edit-actions {
+
+        gap: 4px;
+    }
+
+
+    .save-btn,
+    .cancel-btn {
+
+        width: 29px;
+        height: 29px;
+    }
+
+
+    .switch {
+
+        width: 44px;
+        height: 24px;
+    }
+
+
+    .slider::before {
+
+        width: 18px;
+        height: 18px;
+
+        left: 3px;
+        top: 3px;
+    }
+
+
+    .switch input:checked + .slider::before {
+
+        transform:
+            translateX(20px);
+    }
+
+
+    .settings-info {
+
+        padding:
+            12px;
+
+        border-radius: 11px;
+    }
+
+
+    .settings-logout {
+
+        min-height: 47px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .settings-page {
+
+        padding:
+            13px
+            8px
+            70px;
+    }
+
+
+    .settings-card {
+
+        padding:
+            13px;
+    }
+
+
+    .settings-row-left span {
+
+        max-width: 165px;
+    }
+
+
+    .settings-edit-input {
+
+        width: 145px;
+    }
+
+
+    .settings-heading h1 {
+
+        font-size: 20px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        transition-duration:
+            0.01ms !important;
+
+        animation-duration:
+            0.01ms !important;
+    }
+}
+
+/* =========================================================
+   BACK BUTTON RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .settings-top {
+        margin-bottom: 18px;
+    }
+
+    .settings-top .back-btn {
+        min-height: 36px;
+
+        padding: 0 12px;
+
+        font-size: 11px;
+
+        border-radius: 9px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .settings-top {
+        margin-bottom: 16px;
+    }
+
+    .settings-top .back-btn {
+        min-height: 34px;
+
+        padding: 0 11px;
+
+        font-size: 11px;
+
+        gap: 6px;
+    }
+}

@@ -1,0 +1,230 @@
+/* =========================================================
+   DRINKIT - LIVER COINS
+   Original Green Theme
+========================================================= */
+
+.coins-page {
+  min-height: 100vh;
+  padding: 35px 20px;
+  background: #f7f9f8;
+}
+
+.coins-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.coins-header {
+  margin-bottom: 25px;
+}
+
+.coins-header h1 {
+  color: #111827;
+  margin: 15px 0 0;
+  font-size: 32px;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  color: #168f4d;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.back-btn:hover {
+  color: #0f7a3f;
+}
+
+/* =========================================================
+   BALANCE CARD
+========================================================= */
+
+.coins-balance-card {
+  text-align: center;
+  padding: 35px 20px;
+  border-radius: 18px;
+
+  /* DrinkIt green */
+  background: #168f4d;
+
+  color: white;
+  margin-bottom: 20px;
+
+  box-shadow: 0 8px 25px rgba(22, 143, 77, 0.18);
+}
+
+.coins-balance-card svg {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.coins-balance-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.coins-balance-card h2 {
+  font-size: 45px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.coins-balance-card span {
+  opacity: 0.95;
+}
+
+/* =========================================================
+   INFO CARDS
+========================================================= */
+
+.coins-info-card,
+.coins-summary {
+  background: white;
+  border: 1px solid #e1ebe5;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.coins-info-card h2 {
+  color: #111827;
+  margin-top: 0;
+}
+
+.coin-rule {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf2ef;
+}
+
+.coin-rule:last-child {
+  border-bottom: none;
+}
+
+.coin-rule svg {
+  color: #168f4d;
+  margin-top: 5px;
+}
+
+.coin-rule strong {
+  color: #111827;
+}
+
+.coin-rule p {
+  color: #64748b;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.coins-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.coins-summary div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.coins-summary span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.coins-summary strong {
+  color: #111827;
+  font-size: 18px;
+}
+
+/* =========================================================
+   SHOP BUTTON
+========================================================= */
+
+.coins-shop-btn {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+
+  background: #168f4d;
+  color: white;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.coins-shop-btn:hover {
+  background: #0f7a3f;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.coins-empty {
+  text-align: center;
+  background: white;
+  border: 1px solid #e1ebe5;
+  border-radius: 14px;
+  padding: 50px 20px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.coins-empty svg {
+  font-size: 45px;
+  color: #168f4d;
+}
+
+.coins-empty button {
+  border: none;
+  padding: 11px 25px;
+  border-radius: 7px;
+
+  background: #168f4d;
+  color: white;
+
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.coins-empty button:hover {
+  background: #0f7a3f;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .coins-page {
+    padding: 25px 15px;
+  }
+
+  .coins-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .coins-header h1 {
+    font-size: 27px;
+  }
+}

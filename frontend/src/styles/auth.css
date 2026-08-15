@@ -1,0 +1,1543 @@
+/* =========================================================
+   DRINKIT PREMIUM AUTH UI
+   LOGIN + REGISTER
+========================================================= */
+
+:root {
+    --green: #1e8e3e;
+    --green-dark: #166534;
+    --green-light: #34a853;
+
+    --text: #17231b;
+    --muted: #66736b;
+
+    --white: rgba(255, 255, 255, 0.96);
+    --border: #dce8df;
+
+    --shadow:
+        0 25px 70px rgba(22, 101, 52, 0.14),
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    background: #eef7f0;
+}
+
+
+/* =========================================================
+   AUTH PAGE
+========================================================= */
+
+.auth-page {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100dvh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    background:
+
+        /* soft center light */
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.60) 25%,
+            transparent 55%
+        ),
+
+        /* left green glow */
+        radial-gradient(
+            circle at 5% 50%,
+            rgba(30, 142, 62, 0.16),
+            transparent 35%
+        ),
+
+        /* right green glow */
+        radial-gradient(
+            circle at 95% 50%,
+            rgba(52, 168, 83, 0.14),
+            transparent 35%
+        ),
+
+        /* top light */
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 255, 255, 0.9),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #e8f5eb 0%,
+            #f4faf5 45%,
+            #e5f3e8 100%
+        );
+}
+
+
+/* =========================================================
+   SOFT AMBIENT LIGHT
+========================================================= */
+
+.auth-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    left: -180px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(30, 142, 62, 0.10),
+            transparent 68%
+        );
+
+    filter: blur(8px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.auth-page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(52, 168, 83, 0.11),
+            transparent 68%
+        );
+
+    filter: blur(8px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   DECORATIVE BOTTLES
+   These work if your JSX contains:
+   .auth-bottle-left
+   .auth-bottle-right
+========================================================= */
+
+.auth-decoration {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    opacity: 0.34;
+}
+
+
+/* =========================================================
+   LEFT BOTTLE
+========================================================= */
+
+.auth-bottle-left {
+
+    position: absolute;
+
+    width: 105px;
+    height: 270px;
+
+    left: 7%;
+    top: 50%;
+
+    transform:
+        translateY(-50%)
+        rotate(-9deg);
+
+    border: 2px solid rgba(30, 100, 55, 0.22);
+
+    border-radius:
+        28px 28px 22px 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.10),
+            rgba(30,142,62,0.04),
+            rgba(255,255,255,0.12)
+        );
+
+    box-shadow:
+        inset 8px 0 15px rgba(255,255,255,0.15),
+        inset -8px 0 15px rgba(30,142,62,0.04);
+
+    animation: floatBottle 7s ease-in-out infinite;
+}
+
+
+/* Bottle neck */
+
+.auth-bottle-left::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 43px;
+    height: 65px;
+
+    top: -63px;
+    left: 29px;
+
+    border:
+        2px solid rgba(30, 100, 55, 0.22);
+
+    border-bottom: none;
+
+    border-radius:
+        12px 12px 0 0;
+
+    background:
+        rgba(255,255,255,0.06);
+}
+
+
+/* Bottle shoulder */
+
+.auth-bottle-left::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 82px;
+    height: 45px;
+
+    top: -12px;
+    left: 9px;
+
+    border:
+        2px solid rgba(30, 100, 55, 0.18);
+
+    border-bottom: none;
+
+    border-radius:
+        45px 45px 0 0;
+}
+
+
+/* =========================================================
+   RIGHT BOTTLE
+========================================================= */
+
+.auth-bottle-right {
+
+    position: absolute;
+
+    width: 82px;
+    height: 225px;
+
+    right: 8%;
+    bottom: 8%;
+
+    transform: rotate(9deg);
+
+    border:
+        2px solid rgba(30, 100, 55, 0.19);
+
+    border-radius:
+        24px 24px 20px 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08),
+            rgba(30,142,62,0.035),
+            rgba(255,255,255,0.10)
+        );
+
+    animation:
+        floatBottleReverse 8s ease-in-out infinite;
+}
+
+
+/* Right bottle neck */
+
+.auth-bottle-right::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 35px;
+    height: 55px;
+
+    top: -54px;
+    left: 21px;
+
+    border:
+        2px solid rgba(30, 100, 55, 0.19);
+
+    border-bottom: none;
+
+    border-radius:
+        10px 10px 0 0;
+}
+
+
+/* =========================================================
+   PREMIUM GLASS
+========================================================= */
+
+.auth-glass {
+
+    position: absolute;
+
+    width: 110px;
+    height: 125px;
+
+    right: 16%;
+    top: 14%;
+
+    transform: rotate(7deg);
+
+    border:
+        2px solid rgba(30, 100, 55, 0.17);
+
+    border-top: none;
+
+    border-radius:
+        6px 6px 30px 30px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(255,255,255,0.14),
+            rgba(30,142,62,0.035),
+            rgba(255,255,255,0.10)
+        );
+
+    animation:
+        glassFloat 9s ease-in-out infinite;
+}
+
+
+/* Glass rim */
+
+.auth-glass::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+    height: 16px;
+
+    left: -2px;
+    top: -8px;
+
+    border:
+        2px solid rgba(30, 100, 55, 0.17);
+
+    border-radius: 50%;
+}
+
+
+/* Glass liquid */
+
+.auth-glass::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 72px;
+    height: 38px;
+
+    left: 17px;
+    bottom: 18px;
+
+    border-top:
+        2px solid rgba(30, 142, 62, 0.14);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   ICE CUBE DECORATIONS
+========================================================= */
+
+.auth-ice {
+
+    position: absolute;
+
+    width: 38px;
+    height: 38px;
+
+    border:
+        2px solid rgba(30, 100, 55, 0.14);
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.40),
+            rgba(210,240,220,0.08)
+        );
+
+    transform: rotate(20deg);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.auth-ice.one {
+
+    left: 18%;
+    bottom: 14%;
+
+    animation:
+        iceFloat 6s ease-in-out infinite;
+}
+
+
+.auth-ice.two {
+
+    right: 22%;
+    bottom: 18%;
+
+    width: 28px;
+    height: 28px;
+
+    transform: rotate(35deg);
+
+    animation:
+        iceFloat 7s ease-in-out infinite reverse;
+}
+
+
+.auth-ice.three {
+
+    right: 13%;
+    top: 32%;
+
+    width: 22px;
+    height: 22px;
+
+    transform: rotate(15deg);
+
+    animation:
+        iceFloat 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   DECORATIVE BUBBLES
+========================================================= */
+
+.auth-bubble {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(30, 142, 62, 0.17);
+
+    background:
+        rgba(255,255,255,0.20);
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation:
+        bubbleFloat 7s ease-in-out infinite;
+}
+
+
+.auth-bubble.one {
+
+    width: 9px;
+    height: 9px;
+
+    left: 27%;
+    top: 28%;
+}
+
+
+.auth-bubble.two {
+
+    width: 6px;
+    height: 6px;
+
+    right: 31%;
+    top: 35%;
+
+    animation-delay: 1s;
+}
+
+
+.auth-bubble.three {
+
+    width: 11px;
+    height: 11px;
+
+    right: 25%;
+    bottom: 25%;
+
+    animation-delay: 2s;
+}
+
+
+.auth-bubble.four {
+
+    width: 7px;
+    height: 7px;
+
+    left: 25%;
+    bottom: 30%;
+
+    animation-delay: 3s;
+}
+
+
+/* =========================================================
+   COCONUT-STYLE DECORATION
+========================================================= */
+
+.auth-coconut {
+
+    position: absolute;
+
+    width: 92px;
+    height: 78px;
+
+    left: 15%;
+    bottom: 7%;
+
+    border:
+        2px solid rgba(92, 76, 35, 0.16);
+
+    border-radius:
+        45% 45% 48% 48%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(110, 90, 45, 0.07),
+            rgba(255,255,255,0.08)
+        );
+
+    transform: rotate(-8deg);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+.auth-coconut::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 50px;
+    height: 24px;
+
+    left: 18px;
+    top: -11px;
+
+    border:
+        2px solid rgba(92, 76, 35, 0.14);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.13);
+}
+
+
+/* =========================================================
+   AMBIENT DECORATIVE LIGHTS
+========================================================= */
+
+.auth-light {
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.50),
+            rgba(255,255,255,0.05) 55%,
+            transparent 70%
+        );
+
+    filter: blur(2px);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   AUTH CARD
+========================================================= */
+
+.auth-card {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    max-height: calc(100dvh - 40px);
+
+    overflow-y: auto;
+
+    padding: 30px 34px;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border:
+        1px solid rgba(255,255,255,0.95);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 30px 80px rgba(22,101,52,0.16),
+        0 8px 30px rgba(0,0,0,0.07);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+    text-align: center;
+
+    animation:
+        cardAppear 0.6s ease-out;
+}
+
+
+/* Hide scrollbar */
+
+.auth-card::-webkit-scrollbar {
+    width: 4px;
+}
+
+.auth-card::-webkit-scrollbar-thumb {
+    background: rgba(30,142,62,0.20);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   CARD TOP GREEN LINE
+========================================================= */
+
+.auth-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 15%;
+
+    width: 70%;
+    height: 3px;
+
+    border-radius: 0 0 10px 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #1e8e3e,
+            #34a853,
+            transparent
+        );
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.auth-logo {
+
+    margin-bottom: 18px;
+
+    color: #17231b;
+
+    font-size: 31px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+
+.auth-logo span {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.auth-card h1 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    font-weight: 750;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.auth-subtitle {
+
+    margin:
+        9px
+        0
+        17px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER ICON
+========================================================= */
+
+.auth-title-icon {
+
+    width: 46px;
+    height: 46px;
+
+    margin:
+        0
+        auto
+        12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e4f5e8,
+            #f3faf5
+        );
+
+    border:
+        1px solid #d3ead9;
+
+    color: var(--green);
+
+    font-size: 18px;
+
+    box-shadow:
+        0 8px 20px rgba(30,142,62,0.10);
+}
+
+
+/* =========================================================
+   SECURITY BADGE
+========================================================= */
+
+.auth-secure {
+
+    width: fit-content;
+
+    margin:
+        0
+        auto
+        17px;
+
+    padding:
+        7px
+        12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border:
+        1px solid #d4ead9;
+
+    border-radius: 30px;
+
+    background:
+        rgba(238,249,241,0.85);
+
+    color: #4e795c;
+
+    font-size: 10.5px;
+
+    font-weight: 650;
+}
+
+
+.auth-secure svg {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.auth-error {
+
+    width: 100%;
+
+    margin-bottom: 14px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid #fecaca;
+
+    border-radius: 10px;
+
+    background: #fff1f2;
+
+    color: #b91c1c;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.auth-card form {
+    width: 100%;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+========================================================= */
+
+.auth-input-group {
+
+    width: 100%;
+
+    height: 48px;
+
+    margin-bottom: 11px;
+
+    padding:
+        0
+        13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background:
+        #f8fbf9;
+
+    border:
+        1px solid #d8e5dc;
+
+    border-radius: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.auth-input-group svg {
+
+    flex-shrink: 0;
+
+    color: #7b897f;
+
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.auth-input-group input {
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #1f2937;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+
+.auth-input-group input::placeholder {
+    color: #98a39c;
+}
+
+
+.auth-input-group:hover {
+
+    border-color:
+        #bcd6c4;
+
+    background:
+        #fbfdfb;
+}
+
+
+.auth-input-group:focus-within {
+
+    background: #ffffff;
+
+    border-color:
+        var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(30,142,62,0.09);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.auth-input-group:focus-within svg {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   AUTH BUTTON
+========================================================= */
+
+.auth-btn {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 49px;
+
+    margin-top: 4px;
+
+    padding:
+        0
+        18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16843a,
+            #27a64f
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(30,142,62,0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.auth-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.22),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.55s ease;
+}
+
+
+.auth-btn:hover::before {
+    left: 140%;
+}
+
+
+.auth-btn:hover:not(:disabled) {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(30,142,62,0.27);
+
+    filter:
+        brightness(1.03);
+}
+
+
+.auth-btn:active:not(:disabled) {
+
+    transform:
+        translateY(0);
+
+    box-shadow:
+        0 7px 18px rgba(30,142,62,0.20);
+}
+
+
+.auth-btn:disabled {
+
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   ACCOUNT SWITCH
+========================================================= */
+
+.auth-switch {
+
+    margin:
+        15px
+        0
+        0;
+
+    color: #6d7871;
+
+    font-size: 11.5px;
+
+    line-height: 1.5;
+}
+
+
+.auth-switch a {
+
+    color: var(--green);
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.auth-switch a:hover {
+
+    color: var(--green-dark);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CONTINUE SHOPPING
+========================================================= */
+
+.auth-home-link {
+
+    display: block;
+
+    margin-top: 11px;
+
+    color: #7b867f;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.auth-home-link:hover {
+
+    color: var(--green);
+
+    transform:
+        translateX(-2px);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(18px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes floatBottle {
+
+    0%,
+    100% {
+        transform:
+            translateY(-50%)
+            rotate(-9deg);
+    }
+
+    50% {
+        transform:
+            translateY(calc(-50% - 10px))
+            rotate(-6deg);
+    }
+}
+
+
+@keyframes floatBottleReverse {
+
+    0%,
+    100% {
+        transform:
+            rotate(9deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(6deg)
+            translateY(-12px);
+    }
+}
+
+
+@keyframes glassFloat {
+
+    0%,
+    100% {
+        transform:
+            rotate(7deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(4deg)
+            translateY(-12px);
+    }
+}
+
+
+@keyframes iceFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(20deg);
+    }
+
+    50% {
+        transform:
+            translateY(-10px)
+            rotate(28deg);
+    }
+}
+
+
+@keyframes bubbleFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform:
+            translateY(-14px);
+        opacity: 0.65;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .auth-bottle-left {
+        left: -25px;
+    }
+
+    .auth-bottle-right {
+        right: -20px;
+    }
+
+    .auth-glass {
+        right: 5%;
+    }
+
+    .auth-coconut {
+        left: 5%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .auth-page {
+
+        padding:
+            18px
+            12px;
+
+        overflow-y: auto;
+    }
+
+
+    .auth-card {
+
+        max-width: 420px;
+
+        max-height: none;
+
+        padding:
+            28px
+            20px;
+
+        border-radius: 20px;
+    }
+
+
+    .auth-logo {
+
+        font-size: 28px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .auth-card h1 {
+        font-size: 24px;
+    }
+
+
+    .auth-subtitle {
+
+        font-size: 12px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .auth-input-group {
+
+        height: 47px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .auth-btn {
+        height: 48px;
+    }
+
+
+    /* Keep decorations behind but subtle */
+
+    .auth-bottle-left {
+
+        left: -65px;
+
+        width: 85px;
+        height: 230px;
+
+        opacity: 0.18;
+    }
+
+
+    .auth-bottle-right {
+
+        right: -55px;
+
+        width: 70px;
+        height: 190px;
+
+        opacity: 0.18;
+    }
+
+
+    .auth-glass {
+
+        right: -25px;
+        top: 8%;
+
+        width: 80px;
+        height: 100px;
+
+        opacity: 0.16;
+    }
+
+
+    .auth-coconut {
+
+        left: -20px;
+        bottom: 4%;
+
+        width: 70px;
+        height: 60px;
+
+        opacity: 0.16;
+    }
+
+
+    .auth-ice {
+        opacity: 0.25;
+    }
+
+
+    .auth-bubble {
+        opacity: 0.25;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .auth-page {
+        padding: 12px 8px;
+    }
+
+
+    .auth-card {
+
+        padding:
+            25px
+            16px;
+
+        border-radius: 18px;
+    }
+
+
+    .auth-logo {
+        font-size: 26px;
+    }
+
+
+    .auth-card h1 {
+        font-size: 22px;
+    }
+
+
+    .auth-input-group {
+        height: 45px;
+    }
+
+
+    .auth-btn {
+        height: 46px;
+    }
+
+
+    .auth-switch {
+        font-size: 11px;
+    }
+
+
+    .auth-home-link {
+        font-size: 10.5px;
+    }
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}

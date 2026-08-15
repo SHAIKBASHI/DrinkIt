@@ -1,0 +1,558 @@
+/* =========================================================
+   DRINKIT - ORDERS PAGE
+========================================================= */
+
+.orders-page {
+    min-height: 100vh;
+
+    padding: 45px 20px 100px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(30, 142, 62, 0.07),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(52, 168, 83, 0.06),
+            transparent 30%
+        ),
+        #f7faf8;
+}
+
+
+.orders-container {
+    width: 100%;
+    max-width: 920px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.orders-header {
+    margin-bottom: 30px;
+}
+
+
+.orders-container h1 {
+    margin: 0 0 7px;
+
+    color: #17231b;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+}
+
+
+.orders-subtitle {
+    margin: 0;
+
+    color: #718078;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ORDERS LIST
+========================================================= */
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   ORDER CARD
+========================================================= */
+
+.order-card {
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e2ebe5;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 7px 24px rgba(24, 61, 37, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.order-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #cde2d3;
+
+    box-shadow:
+        0 12px 30px rgba(24, 61, 37, 0.09);
+}
+
+
+/* =========================================================
+   ORDER TOP
+========================================================= */
+
+.order-card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.order-card-top h3 {
+    margin: 0 0 7px;
+
+    color: #17231b;
+
+    font-size: 18px;
+
+    font-weight: 750;
+}
+
+
+.order-date {
+    margin: 0;
+
+    color: #7b877f;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+.order-status {
+    flex-shrink: 0;
+
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    font-weight: 750;
+
+    letter-spacing: 0.2px;
+
+    text-transform: capitalize;
+
+    border: 1px solid transparent;
+}
+
+
+.order-status.placed {
+    background: #fff8e7;
+
+    color: #9a6c17;
+
+    border-color: #f4e4b7;
+}
+
+
+.order-status.confirmed {
+    background: #eef8f1;
+
+    color: #267344;
+
+    border-color: #d6eadb;
+}
+
+
+.order-status.out {
+    background: #edf6ff;
+
+    color: #27658f;
+
+    border-color: #d5e7f5;
+}
+
+
+.order-status.delivered {
+    background: #eaf8ee;
+
+    color: #21713b;
+
+    border-color: #d0ead7;
+}
+
+
+.order-status.cancelled {
+    background: #fff0ef;
+
+    color: #a1433d;
+
+    border-color: #f0d2cf;
+}
+
+
+/* =========================================================
+   ORDER MIDDLE
+========================================================= */
+
+.order-card-middle {
+    margin-top: 18px;
+
+    padding: 14px 15px;
+
+    border-radius: 12px;
+
+    background: #f7faf8;
+
+    border: 1px solid #edf2ee;
+}
+
+
+/* =========================================================
+   ORDER BOTTOM
+========================================================= */
+
+.order-card-bottom {
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid #edf1ee;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.order-card-bottom div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.order-card-bottom span {
+    color: #7a857e;
+
+    font-size: 12px;
+}
+
+
+.order-card-bottom strong {
+    color: #17231b;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   VIEW DETAILS
+========================================================= */
+
+.order-view-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    border: 1px solid #d5e6da;
+
+    border-radius: 9px;
+
+    background: #f5faf7;
+
+    color: #1e8e3e;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.order-view-btn:hover {
+    background: #1e8e3e;
+
+    border-color: #1e8e3e;
+
+    color: white;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 14px rgba(30, 142, 62, 0.18);
+}
+
+
+/* =========================================================
+   EMPTY ORDERS
+========================================================= */
+
+.empty-orders {
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #e2ebe5;
+
+    border-radius: 20px;
+
+    padding: 60px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(24, 61, 37, 0.06);
+}
+
+
+.empty-orders-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef8f1;
+
+    color: #1e8e3e;
+
+    font-size: 30px;
+}
+
+
+.empty-orders h2 {
+    margin: 0 0 9px;
+
+    color: #17231b;
+
+    font-size: 22px;
+}
+
+
+.empty-orders p {
+    margin: 0 auto 25px;
+
+    max-width: 420px;
+
+    color: #758078;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SHOP / HOME BUTTONS
+========================================================= */
+
+.orders-shop-btn,
+.orders-home-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 11px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #168f4d,
+            #34a853
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    box-shadow:
+        0 7px 17px rgba(30, 142, 62, 0.16);
+}
+
+
+.orders-shop-btn:hover,
+.orders-home-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(30, 142, 62, 0.22);
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.orders-message {
+
+    background: white;
+
+    border: 1px solid #e2ebe5;
+
+    border-radius: 18px;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 7px 24px rgba(24, 61, 37, 0.05);
+}
+
+
+.orders-message p {
+    margin: 0 0 20px;
+
+    color: #68756d;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .orders-page {
+        padding: 30px 14px 80px;
+    }
+
+
+    .orders-container h1 {
+        font-size: 27px;
+    }
+
+
+    .orders-subtitle {
+        font-size: 13px;
+    }
+
+
+    .order-card {
+        padding: 17px;
+        border-radius: 16px;
+    }
+
+
+    .order-card-top {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .order-status {
+        align-self: flex-start;
+    }
+
+
+    .order-card-bottom {
+        align-items: flex-start;
+    }
+
+
+    .order-card-bottom strong {
+        font-size: 16px;
+    }
+
+
+    .order-view-btn {
+        padding: 8px 11px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .orders-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .orders-container h1 {
+        font-size: 24px;
+    }
+
+
+    .order-card-bottom {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .order-view-btn {
+        width: 100%;
+    }
+
+}

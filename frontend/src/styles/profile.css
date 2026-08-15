@@ -1,0 +1,1240 @@
+/* =========================================================
+   DRINKIT — PREMIUM PROFILE PAGE
+========================================================= */
+
+:root {
+    --profile-green: #168f4d;
+    --profile-green-dark: #0f713b;
+    --profile-green-light: #22a85a;
+
+    --profile-bg: #f4f8f5;
+    --profile-card: #ffffff;
+
+    --profile-text: #17231b;
+    --profile-muted: #6b7770;
+
+    --profile-border: #e2ebe5;
+
+    --profile-shadow:
+        0 10px 30px rgba(20, 60, 35, 0.07);
+
+    --profile-shadow-hover:
+        0 16px 35px rgba(20, 90, 45, 0.11);
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.profile-page {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 28px 24px 100px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 5% 10%,
+            rgba(30, 142, 62, 0.09),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 95% 35%,
+            rgba(52, 168, 83, 0.07),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            180deg,
+            #f8fbf9 0%,
+            #f1f7f3 100%
+        );
+}
+
+
+/* =========================================================
+   SUBTLE BACKGROUND DECORATION
+========================================================= */
+
+.profile-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -130px;
+    top: 100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(30, 142, 62, 0.08);
+
+    box-shadow:
+        0 0 0 35px rgba(30, 142, 62, 0.025),
+        0 0 0 70px rgba(30, 142, 62, 0.018);
+
+    pointer-events: none;
+}
+
+
+.profile-page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    left: -110px;
+    bottom: 120px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(30, 142, 62, 0.07);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.profile-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 34px 30px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    color: white;
+
+    border-radius: 24px;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255,255,255,0.16),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #137b41 0%,
+            #168f4d 45%,
+            #28a85a 100%
+        );
+
+    box-shadow:
+        0 18px 45px rgba(22, 143, 77, 0.18);
+}
+
+
+/* Decorative circles */
+
+.profile-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    right: -65px;
+    top: -90px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.13);
+
+    box-shadow:
+        0 0 0 25px rgba(255,255,255,0.035),
+        0 0 0 50px rgba(255,255,255,0.025);
+
+    pointer-events: none;
+}
+
+
+.profile-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    left: -35px;
+    bottom: -50px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.avatar {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.17);
+
+    border:
+        1px solid rgba(255,255,255,0.30);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.12);
+
+    font-size: 55px;
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   PROFILE TEXT
+========================================================= */
+
+.profile-card h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 6px;
+
+    font-size: 25px;
+
+    line-height: 1.25;
+
+    font-weight: 750;
+
+    letter-spacing: -0.4px;
+}
+
+
+.profile-card p {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 3px 0;
+
+    color: rgba(255,255,255,0.88);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   WALLET / LIVER COINS
+========================================================= */
+
+.wallet-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 20px auto 0;
+
+    min-height: 90px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: var(--profile-card);
+
+    border:
+        1px solid var(--profile-border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--profile-shadow);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.wallet-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #c4dfcd;
+
+    box-shadow:
+        var(--profile-shadow-hover);
+}
+
+
+.wallet-card h2 {
+
+    margin: 0;
+
+    color: var(--profile-green);
+
+    font-size: 24px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stats {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 20px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+
+.stat-box {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 105px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border:
+        1px solid var(--profile-border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        var(--profile-shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.stat-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 55px;
+    height: 55px;
+
+    right: -20px;
+    top: -20px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(30,142,62,0.06);
+}
+
+
+.stat-box:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--profile-shadow-hover);
+
+    border-color:
+        #c9dfd0;
+}
+
+
+.stat-box h2 {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 0 0 5px;
+
+    color: var(--profile-green);
+
+    font-size: 23px;
+
+    font-weight: 750;
+}
+
+
+.stat-box p {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 0;
+
+    color: var(--profile-muted);
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   MENU CARD
+========================================================= */
+
+.menu-card {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 24px auto 0;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,255,255,0.97);
+
+    border:
+        1px solid var(--profile-border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        var(--profile-shadow);
+}
+
+
+/* =========================================================
+   MENU ITEM
+========================================================= */
+
+.menu-item {
+
+    min-height: 68px;
+
+    padding: 14px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom:
+        1px solid #edf2ee;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+
+.menu-item:hover {
+
+    background:
+        #f5faf7;
+
+    padding-left: 24px;
+}
+
+
+/* =========================================================
+   MENU LEFT
+========================================================= */
+
+.left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 0;
+}
+
+
+.menu-icon {
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        #edf8f0;
+
+    color: var(--profile-green);
+
+    font-size: 17px;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.menu-item:hover .menu-icon {
+
+    transform:
+        scale(1.05);
+
+    background:
+        #e1f3e6;
+}
+
+
+/* =========================================================
+   RECENT ORDERS
+========================================================= */
+
+.recent-orders {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 24px auto 0;
+
+    padding: 22px;
+
+    background:
+        rgba(255,255,255,0.97);
+
+    border:
+        1px solid var(--profile-border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        var(--profile-shadow);
+}
+
+
+/* =========================================================
+   RECENT ORDERS HEADER
+========================================================= */
+
+.recent-orders-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+
+.recent-orders-header h3 {
+
+    margin: 0;
+
+    color: var(--profile-text);
+
+    font-size: 20px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.recent-orders-header .view-all-btn {
+
+    padding:
+        8px
+        14px;
+
+    border:
+        1px solid #b9dbc4;
+
+    border-radius: 9px;
+
+    background:
+        #f8fcf9;
+
+    color: var(--profile-green);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.recent-orders-header .view-all-btn:hover {
+
+    background:
+        var(--profile-green);
+
+    border-color:
+        var(--profile-green);
+
+    color: white;
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(22,143,77,0.16);
+}
+
+
+/* =========================================================
+   ORDER
+========================================================= */
+
+.order {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px 8px;
+
+    border-bottom:
+        1px solid #edf2ef;
+
+    border-radius: 9px;
+
+    transition:
+        background 0.2s ease,
+        padding 0.2s ease;
+}
+
+
+.order:last-child {
+
+    border-bottom: none;
+
+    margin-bottom: 0;
+}
+
+
+.order:hover {
+
+    background:
+        #f7fbf8;
+
+    padding-left: 13px;
+
+    padding-right: 13px;
+}
+
+
+/* =========================================================
+   ORDER DETAILS
+========================================================= */
+
+.order h4 {
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--profile-text);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+.order small {
+
+    color:
+        var(--profile-muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ORDER PRICE
+========================================================= */
+
+.order span {
+
+    flex-shrink: 0;
+
+    color:
+        var(--profile-green);
+
+    font-size: 15px;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   NO ORDERS
+========================================================= */
+
+.no-recent-orders {
+
+    padding:
+        35px
+        15px;
+
+    text-align: center;
+}
+
+
+.no-recent-orders p {
+
+    margin:
+        0 0 17px;
+
+    color:
+        var(--profile-muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SHOP BUTTON
+========================================================= */
+
+.orders-shop-btn {
+
+    padding:
+        11px
+        20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--profile-green),
+            var(--profile-green-light)
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(22,143,77,0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.orders-shop-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 23px rgba(22,143,77,0.22);
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.logout-btn {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin:
+        24px auto 0;
+
+    min-height: 52px;
+
+    padding:
+        0
+        18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border:
+        1px solid #fecaca;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.88);
+
+    color:
+        #dc2626;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.logout-btn:hover {
+
+    background:
+        #dc2626;
+
+    border-color:
+        #dc2626;
+
+    color:
+        white;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(220,38,38,0.16);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .profile-page {
+
+        padding:
+            22px
+            18px
+            90px;
+    }
+
+
+    .stats {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 12px;
+    }
+
+
+    .profile-card {
+
+        border-radius: 21px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .profile-page {
+
+        padding:
+            16px
+            14px
+            80px;
+    }
+
+
+    .profile-card {
+
+        padding:
+            28px
+            18px;
+
+        border-radius: 20px;
+    }
+
+
+    .avatar {
+
+        width: 72px;
+        height: 72px;
+
+        font-size: 48px;
+    }
+
+
+    .profile-card h2 {
+        font-size: 22px;
+    }
+
+
+    .stats {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+    }
+
+
+    .stat-box {
+
+        min-height: 80px;
+
+        padding:
+            15px;
+    }
+
+
+    .wallet-card {
+
+        padding:
+            16px;
+
+        min-height: 78px;
+    }
+
+
+    .wallet-card h2 {
+        font-size: 21px;
+    }
+
+
+    .menu-card,
+    .recent-orders {
+
+        border-radius: 16px;
+    }
+
+
+    .recent-orders {
+
+        padding:
+            18px;
+    }
+
+
+    .recent-orders-header h3 {
+        font-size: 18px;
+    }
+
+
+    .menu-item {
+
+        min-height: 62px;
+
+        padding:
+            12px
+            15px;
+    }
+
+
+    .menu-item:hover {
+        padding-left: 18px;
+    }
+
+
+    .menu-icon {
+
+        width: 37px;
+        height: 37px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .profile-page {
+
+        padding:
+            12px
+            10px
+            75px;
+    }
+
+
+    .profile-card {
+
+        padding:
+            25px
+            14px;
+    }
+
+
+    .avatar {
+
+        width: 65px;
+        height: 65px;
+
+        font-size: 42px;
+
+        margin-bottom: 11px;
+    }
+
+
+    .profile-card h2 {
+        font-size: 20px;
+    }
+
+
+    .profile-card p {
+        font-size: 12px;
+    }
+
+
+    .wallet-card {
+
+        margin-top: 14px;
+
+        padding:
+            14px;
+
+        border-radius: 15px;
+    }
+
+
+    .wallet-card h2 {
+        font-size: 19px;
+    }
+
+
+    .stat-box {
+
+        border-radius: 14px;
+    }
+
+
+    .recent-orders {
+
+        margin-top: 16px;
+
+        padding:
+            15px;
+    }
+
+
+    .recent-orders-header {
+
+        margin-bottom: 8px;
+    }
+
+
+    .recent-orders-header h3 {
+        font-size: 17px;
+    }
+
+
+    .recent-orders-header .view-all-btn {
+
+        padding:
+            7px
+            10px;
+
+        font-size: 11px;
+    }
+
+
+    .order {
+
+        padding:
+            13px
+            3px;
+    }
+
+
+    .order h4 {
+        font-size: 13px;
+    }
+
+
+    .order small {
+        font-size: 10px;
+    }
+
+
+    .order span {
+        font-size: 13px;
+    }
+
+
+    .logout-btn {
+
+        min-height: 48px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        transition-duration:
+            0.01ms !important;
+
+        animation-duration:
+            0.01ms !important;
+    }
+}

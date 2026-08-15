@@ -1,0 +1,364 @@
+/* =========================================================
+   DRINKIT RECOVERY BANNER
+========================================================= */
+
+.recovery-banner {
+    position: relative;
+
+    width: calc(100% - 40px);
+    max-width: 1400px;
+
+    margin: 40px auto 0;
+
+    padding: 46px 50px;
+
+    background:
+        radial-gradient(
+            circle at 82% 15%,
+            rgba(134, 239, 172, 0.28),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #064e3b 0%,
+            #047857 50%,
+            #1e8e3e 100%
+        );
+
+    color: #ffffff;
+
+    border-radius: 24px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(4, 120, 87, 0.20);
+}
+
+
+/* Decorative circles */
+
+.recovery-banner::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -90px;
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+}
+
+
+.recovery-banner::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: 190px;
+    top: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.recovery-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 620px;
+}
+
+
+.recovery-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    margin-bottom: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.recovery-banner h2 {
+    margin: 0 0 14px;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -0.8px;
+}
+
+
+.recovery-banner p {
+    margin: 0;
+
+    max-width: 520px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.recovery-btn {
+    margin-top: 25px;
+
+    background: #ffffff;
+
+    color: #047857;
+
+    padding: 13px 23px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.recovery-btn:hover {
+    background: #ecfdf5;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.recovery-image {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 145px;
+
+    line-height: 1;
+
+    opacity: 0.95;
+
+    filter:
+        drop-shadow(
+            0 15px 20px rgba(0, 0, 0, 0.18)
+        );
+
+    animation: recoveryFloat 4.5s ease-in-out infinite;
+}
+
+
+@keyframes recoveryFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .recovery-banner {
+        width: calc(100% - 30px);
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 42px 30px;
+    }
+
+
+    .recovery-content {
+        max-width: 650px;
+
+        margin: auto;
+    }
+
+
+    .recovery-banner p {
+        margin: auto;
+    }
+
+
+    .recovery-image {
+        font-size: 115px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .recovery-banner {
+        width: calc(100% - 24px);
+
+        margin-top: 30px;
+
+        padding: 32px 22px;
+
+        border-radius: 20px;
+
+        gap: 15px;
+    }
+
+
+    .recovery-tag {
+        font-size: 12px;
+
+        padding: 7px 13px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .recovery-banner h2 {
+        font-size: 30px;
+
+        letter-spacing: -0.4px;
+    }
+
+
+    .recovery-banner p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    .recovery-btn {
+        margin-top: 20px;
+
+        padding: 12px 20px;
+
+        font-size: 13px;
+    }
+
+
+    .recovery-image {
+        font-size: 85px;
+
+        margin-top: 8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .recovery-banner {
+        width: calc(100% - 20px);
+
+        padding: 28px 17px;
+    }
+
+
+    .recovery-banner h2 {
+        font-size: 26px;
+    }
+
+
+    .recovery-banner p {
+        font-size: 14px;
+    }
+
+
+    .recovery-image {
+        font-size: 68px;
+    }
+
+}

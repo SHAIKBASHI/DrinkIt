@@ -1,0 +1,883 @@
+/* =========================================================
+   DRINKIT NAVBAR
+   Premium • Clean • Responsive
+========================================================= */
+
+.navbar {
+    position: relative;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #e7eee9;
+
+    box-shadow:
+        0 4px 18px rgba(20, 70, 40, 0.06);
+
+    padding: 15px 24px;
+
+    box-sizing: border-box;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   NAVBAR TOP
+========================================================= */
+
+.navbar-top {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    text-decoration: none;
+
+    color: #17231b;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    transition: all 0.25s ease;
+}
+
+.logo span {
+    color: #1e8e3e;
+
+    transition: color 0.25s ease;
+}
+
+.logo:hover {
+    color: #166534;
+}
+
+.logo:hover span {
+    color: #15803d;
+}
+
+
+/* =========================================================
+   NAVBAR ICONS
+========================================================= */
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.icon-btn {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #e3ebe5;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #344238;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.icon-btn:hover {
+    background: #eff9f2;
+
+    color: #168f4d;
+
+    border-color: #b9dfc4;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(30, 142, 62, 0.12);
+}
+
+
+/* =========================================================
+   CART BADGE
+========================================================= */
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 19px;
+    height: 19px;
+
+    padding: 0 5px;
+
+    background: #168f4d;
+
+    color: #ffffff;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    box-shadow:
+        0 3px 8px rgba(22, 143, 77, 0.25);
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location-box {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    cursor: pointer;
+
+    padding: 4px 2px;
+
+    transition: opacity 0.2s ease;
+}
+
+.location-box:hover {
+    opacity: 0.82;
+}
+
+.location-icon {
+    color: #168f4d;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+.location-box small {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #7b857e;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.location-box h6 {
+    margin: 0;
+
+    color: #26332b;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SEARCH CONTAINER
+========================================================= */
+
+.search-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    z-index: 3000;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box {
+    width: 100%;
+
+    height: 52px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6f9f7,
+            #f2f7f3
+        );
+
+    border: 1px solid #dce7df;
+
+    border-radius: 15px;
+
+    padding: 0 16px;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease;
+}
+
+.search-box:hover {
+    background: #f1f7f3;
+
+    border-color: #cbded0;
+}
+
+.search-box:focus-within {
+    background: #ffffff;
+
+    border-color: #8fbd9d;
+
+    box-shadow:
+        0 0 0 4px rgba(30, 142, 62, 0.08),
+        0 10px 28px rgba(30, 142, 62, 0.08);
+}
+
+
+/* =========================================================
+   SEARCH ICON
+========================================================= */
+
+.search-icon {
+    color: #6f7c74;
+
+    flex-shrink: 0;
+
+    font-size: 16px;
+
+    transition: color 0.25s ease;
+}
+
+.search-box:focus-within .search-icon {
+    color: #168f4d;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.search-box input {
+    flex: 1;
+
+    width: 100%;
+    min-width: 0;
+
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #1f2d24;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+.search-box input::placeholder {
+    color: #929b95;
+}
+
+
+/* =========================================================
+   SEARCH CLEAR BUTTON
+========================================================= */
+
+.search-clear {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e8eee9;
+
+    color: #66736b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.search-clear:hover {
+    background: #dce8df;
+
+    color: #166534;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   SEARCH RESULTS DROPDOWN
+========================================================= */
+
+.search-results {
+    position: absolute;
+
+    top: calc(100% + 10px);
+
+    left: 0;
+
+    width: 100%;
+
+    max-height: 430px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #dfe9e2;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 60px rgba(20, 60, 35, 0.15),
+        0 8px 22px rgba(0, 0, 0, 0.07);
+
+    z-index: 9999;
+
+    animation:
+        searchDropdown 0.18s ease-out;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+@keyframes searchDropdown {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-7px)
+            scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   SEARCH ITEM
+========================================================= */
+
+.search-item {
+    min-height: 78px;
+
+    display: grid;
+
+    grid-template-columns:
+        58px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px 15px;
+
+    text-decoration: none;
+
+    color: #26332b;
+
+    border-bottom: 1px solid #edf2ee;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.search-item:last-child {
+    border-bottom: none;
+}
+
+.search-item:hover {
+    background:
+        linear-gradient(
+            90deg,
+            #f1f9f3,
+            #ffffff
+        );
+
+    padding-left: 19px;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE CONTAINER
+========================================================= */
+
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+
+.search-item:hover .search-image img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   FALLBACK IMAGE / EMOJI
+========================================================= */
+
+
+
+
+/* =========================================================
+   PRODUCT INFORMATION
+========================================================= */
+
+.search-product-info {
+    min-width: 0;
+}
+
+.search-item h4 {
+    margin: 0 0 5px;
+
+    color: #17231b;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.search-item small {
+    display: block;
+
+    color: #7e8a82;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   PRICE
+   BLACK — AS REQUESTED
+========================================================= */
+
+.search-item strong,
+.search-price {
+    color: #111827 !important;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    padding-left: 8px;
+}
+
+
+/* =========================================================
+   NO RESULTS
+========================================================= */
+
+.no-results {
+    min-height: 130px;
+
+    padding: 25px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    text-align: center;
+
+    color: #7c867f;
+
+    font-size: 13px;
+}
+
+.no-results svg {
+    color: #9aaa9f;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   SEARCH SCROLLBAR
+========================================================= */
+
+.search-results::-webkit-scrollbar {
+    width: 6px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: #bdd4c4;
+
+    border-radius: 20px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: #91b99c;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 13px 18px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .search-box {
+        height: 49px;
+    }
+
+    .search-results {
+        max-height: 360px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 14px;
+    }
+
+    .navbar-top {
+        margin-bottom: 12px;
+    }
+
+    .logo {
+        font-size: 25px;
+
+        letter-spacing: -0.7px;
+    }
+
+    .navbar-icons {
+        gap: 7px;
+    }
+
+    .icon-btn {
+        width: 37px;
+        height: 37px;
+
+        font-size: 15px;
+    }
+
+    .location-box {
+        margin-bottom: 11px;
+
+        gap: 9px;
+    }
+
+    .location-icon {
+        font-size: 18px;
+    }
+
+    .location-box small {
+        font-size: 10px;
+    }
+
+    .location-box h6 {
+        font-size: 13px;
+    }
+
+    .search-box {
+        height: 47px;
+
+        border-radius: 12px;
+
+        padding: 0 13px;
+    }
+
+    .search-box input {
+        font-size: 13px;
+    }
+
+    .search-results {
+        top: calc(100% + 7px);
+
+        max-height: 330px;
+
+        border-radius: 14px;
+
+        box-shadow:
+            0 20px 45px rgba(20, 60, 35, 0.14);
+    }
+
+    .search-item {
+        grid-template-columns:
+            50px
+            minmax(0, 1fr)
+            auto;
+
+        min-height: 68px;
+
+        gap: 10px;
+
+        padding: 8px 11px;
+    }
+
+    .search-item:hover {
+        padding-left: 14px;
+    }
+
+    .search-image {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 11px;
+
+        font-size: 22px;
+    }
+
+    .search-item h4 {
+        font-size: 13px;
+    }
+
+    .search-item small {
+        font-size: 10px;
+    }
+
+    .search-item strong,
+    .search-price {
+        font-size: 13px;
+    }
+
+    .search-clear {
+        width: 26px;
+        height: 26px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .icon-btn {
+        width: 35px;
+        height: 35px;
+
+        font-size: 14px;
+    }
+
+    .navbar-icons {
+        gap: 5px;
+    }
+
+    .search-box {
+        height: 44px;
+
+        border-radius: 11px;
+    }
+
+    .search-results {
+        max-height: 280px;
+
+        border-radius: 12px;
+    }
+
+    .search-item {
+        grid-template-columns:
+            44px
+            minmax(0, 1fr)
+            auto;
+
+        gap: 9px;
+    }
+
+    .search-image {
+        width: 44px;
+        height: 44px;
+    }
+
+    .search-item h4 {
+        font-size: 12px;
+    }
+
+    .search-item small {
+        font-size: 9px;
+    }
+
+    .search-item strong,
+    .search-price {
+        font-size: 12px;
+    }
+
+}
+
+
+
+
+
+.search-image {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+
+    background: #f4f7f5;
+
+    border: 1px solid #dce7df;
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.search-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    padding: 5px;
+
+    box-sizing: border-box;
+}
+
+.search-image-fallback {
+    font-size: 25px;
+}

@@ -1,0 +1,121 @@
+/* =========================================================
+   DRINKIT - NOTIFICATIONS
+   Original Green Theme
+========================================================= */
+
+.notifications-page {
+  min-height: 100vh;
+  padding: 35px 20px;
+  background: #f7f9f8;
+}
+
+.notifications-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.notifications-container h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #111827;
+
+  margin: 20px 0 25px;
+}
+
+.notifications-container h1 svg {
+  color: #168f4d;
+}
+
+/* =========================================================
+   NOTIFICATION LIST
+========================================================= */
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* =========================================================
+   NOTIFICATION CARD
+========================================================= */
+
+.notification-card {
+  display: flex;
+  gap: 17px;
+
+  padding: 20px;
+
+  background: white;
+
+  border: 1px solid #e1ebe5;
+  border-radius: 13px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+
+  transition: 0.2s ease;
+}
+
+.notification-card:hover {
+  border-color: #b9dcc8;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.notification-icon {
+  min-width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eaf7ef;
+  color: #168f4d;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.notification-content h3 {
+  margin: 0 0 7px;
+  color: #111827;
+}
+
+.notification-content p {
+  margin: 0 0 8px;
+
+  color: #64748b;
+
+  line-height: 1.5;
+}
+
+.notification-content small {
+  color: #94a3b8;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+  .notifications-page {
+    padding: 25px 15px;
+  }
+
+  .notification-card {
+    padding: 16px;
+  }
+}
