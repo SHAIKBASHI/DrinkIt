@@ -7,6 +7,7 @@ const api = axios.create({
   }
 });
 
+
 // Automatically attach JWT token
 api.interceptors.request.use(
   (config) => {

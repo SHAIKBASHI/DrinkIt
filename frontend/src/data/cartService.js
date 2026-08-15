@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken } from "./authService";
 
 const API_URL =
-  `${import.meta.env.VITE_API_URL}/api/cart`;
+  `${import.meta.env.VITE_API_URL}/cart`;
 
 
 const getHeaders = () => ({
